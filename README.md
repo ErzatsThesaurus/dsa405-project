@@ -10,7 +10,7 @@ Both raw files are in `data/raw/` and are never modified.
 
 | File | What it is | Source | Retrieved |
 |---|---|---|---|
-| `noaa_tavg_raw.json` | Average monthly temperature for the contiguous U.S., in degrees Fahrenheit, Jan 1978 to Aug 2026 | NOAA National Centers for Environmental Information, Climate at a Glance: https://www.ncei.noaa.gov/access/monitoring/climate-at-a-glance/ | [DATE] |
+| `noaa_tavg_raw.json` | Average monthly temperature for the contiguous U.S., in degrees Fahrenheit, Jan 1978 to Aug 2026 | NOAA National Centers for Environmental Information, Climate at a Glance: https://www.ncei.noaa.gov/access/monitoring/climate-at-a-glance/ | September 3 |
 | `APU000072610.xlsx` | Average monthly price of electricity per kilowatt-hour, U.S. city average, in dollars, Nov 1978 to Jul 2026 | U.S. Bureau of Labor Statistics, downloaded from FRED: https://fred.stlouisfed.org/series/APU000072610 | 2026-09-03 |
 
 Full download details are in `data/raw/SOURCES.md`.
