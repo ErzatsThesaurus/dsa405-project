@@ -23,3 +23,20 @@ Full download details are in `data/raw/SOURCES.md`.
 
 Nothing needs to be downloaded or installed. The notebook reads the data
 directly from this repository.
+
+
+# P3: Acquisition, join, verification
+
+**Notebook:** `DSA405_P3_pdcurry_FA26.ipynb` (Restart runtime, then Run all)
+### Acquisition behavior
+Honest User-Agent naming the coursework, 2 s pause between real requests, 20 s timeout, up to 3 retries on timeouts and 429/5xx, a content check before anything is saved (data present, correct month, no -99 values), and rate-limit headers read from each response. A failed or malformed response stops the code with an error and saves nothing.
+
+### Join
+NOAA left-joined to price on `date` (first of month), `validate="one_to_one"`. Expected rows = rows in NOAA. NOAA months with no price stay with price = NaN. Price months with no NOAA row would be dropped and counted.
+
+### Verification
+`verify()` checks row count, value ranges (temperature 15-85 °F, price $0.01-$1.00 per kWh), and month uniqueness.
+
+### Attribution
+- U.S. Bureau of Labor Statistics, Average Price: Electricity per Kilowatt-Hour in U.S. City Average [APU000072610], retrieved from FRED, Federal Reserve Bank of St. Louis.
+- NOAA National Centers for Environmental Information, Climate at a Glance: National Time Series.
